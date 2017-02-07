@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Assignment1</string>
+    <string name="btn_finish_dialog_label">close</string>
+    <string name="dialog_text">Simple Dialog</string>
+</resources>
