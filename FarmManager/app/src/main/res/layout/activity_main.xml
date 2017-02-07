@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="test.com.myapplication.MainActivity"
+    android:background="#a6a0a0">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temp &amp; Humidity "
+        android:id="@+id/thBttn"
+        android:onClick="onBttnClicked"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="#4a63e0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Temperature :"
+        android:id="@+id/textView"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/thBttn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Humidity   :"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TempValue"
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="70&lt;Temp(F)&lt;90"
+        android:id="@+id/textView3"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignRight="@+id/TempValue"
+        android:layout_alignEnd="@+id/TempValue"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn FAN ON"
+        android:id="@+id/fanBttn"
+        android:onClick="onClickFanOn"
+        android:layout_marginTop="43dp"
+        android:background="#e02b2b"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_toLeftOf="@+id/TempValue"
+        android:layout_toStartOf="@+id/TempValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAN  :"
+        android:id="@+id/textView4"
+        android:layout_marginTop="72dp"
+        android:layout_below="@+id/fanBttn"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fanStatus"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="90&lt;Temp(F)&lt;125"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/fanBttn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TURN FAN &amp; SPRINKLER"
+        android:id="@+id/fanSprinklerBttn"
+        android:layout_above="@+id/textView4"
+        android:onClick="onClickSprinkler"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:background="#30d551" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sprinkler :"
+        android:id="@+id/textView6"
+        android:layout_alignTop="@+id/fanStatus"
+        android:layout_alignLeft="@+id/fanSprinklerBttn"
+        android:layout_alignStart="@+id/fanSprinklerBttn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sprinklerStatus"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/msgText"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/sprinklerStatus"
+        android:layout_alignEnd="@+id/sprinklerStatus" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/humidityVal"
+        android:layout_marginRight="50dp"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/textView" />
+
+</RelativeLayout>
